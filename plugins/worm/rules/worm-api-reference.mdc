@@ -1,0 +1,11 @@
+---
+description: How to look up Worm API and SDK details when writing code against worm.wtf
+globs: "**/*.{py,ts,tsx,js,mjs}"
+alwaysApply: false
+---
+
+worm-api-reference:
+
+- When writing code that calls the Worm API or `worm-sdk`, fetch real schemas with the `read_worm_docs` tool (no args for the index, then pass a path) instead of guessing field names.
+- API base is `https://api.worm.wtf`. Rate limits: 120 req/min public, 300 req/min authenticated, 10 req/min for auth bootstrap. List endpoints paginate with `cursor`.
+- Python SDK: `pip install "worm-sdk[signing]"`. Signing happens locally with a Solana keypair; never send private keys to any API.

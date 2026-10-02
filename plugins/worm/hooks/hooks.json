@@ -1,0 +1,10 @@
+{
+  "hooks": {
+    "beforeMCPExecution": [
+      {
+        "command": "./scripts/confirm-trade.sh",
+        "failClosed": true
+      }
+    ]
+  }
+}

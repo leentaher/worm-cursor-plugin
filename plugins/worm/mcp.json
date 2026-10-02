@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "worm": {
+      "command": "uvx",
+      "args": ["--with", "mcp<2", "worm-mcp"],
+      "env": {
+        "WALLET_PRIVATE_KEY": "${WALLET_PRIVATE_KEY}"
+      }
+    }
+  }
+}

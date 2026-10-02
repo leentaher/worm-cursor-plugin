@@ -1,0 +1,14 @@
+---
+description: Safety rules for any action that uses the Worm MCP tools (orders, margin, redeems, API keys)
+alwaysApply: true
+---
+
+worm-trading-safety:
+
+- Never place, cancel, open, close, redeem, or revoke anything on Worm without the user saying yes to the exact action in this chat. A request like "find me a good trade" authorizes research, not execution.
+- Before any `place_order`, restate: market title, outcome (YES/NO), side, size, limit price as a percentage, and the worm.wtf link (`https://worm.wtf/market/{condition_id}`).
+- Before any `open_margin_position`, call `estimate_margin_position` first and show leverage, collateral, and liquidation price. Worm leverage tops out at 3x; never suggest more.
+- Use `place_order` only for spot (orderbook) markets. Use `open_margin_position` only when the market has `margin_enabled=true`.
+- Quote prices as percentages (e.g. "62%"), not cents.
+- Never print, log, or write `WALLET_PRIVATE_KEY` or HMAC secrets into files, code, commits, or chat.
+- Do not give personalized financial advice. Present data and let the user decide.

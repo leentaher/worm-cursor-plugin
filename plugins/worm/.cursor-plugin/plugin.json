@@ -1,0 +1,34 @@
+{
+  "name": "worm",
+  "displayName": "Worm",
+  "version": "0.1.0",
+  "description": "Research, trade, and manage Worm (worm.wtf) prediction markets on Solana from the Cursor agent. Public market data works with no setup; add a Solana key to trade.",
+  "author": {
+    "name": "Worm",
+    "email": "support@worm.wtf"
+  },
+  "homepage": "https://worm.wtf",
+  "repository": "https://github.com/wormwtf/worm-cursor-plugin",
+  "license": "MIT",
+  "keywords": [
+    "worm",
+    "prediction-markets",
+    "solana",
+    "trading",
+    "mcp",
+    "markets",
+    "forecasting"
+  ],
+  "logo": "assets/logo.png",
+  "variables": {
+    "type": "object",
+    "properties": {
+      "WALLET_PRIVATE_KEY": {
+        "type": "string",
+        "title": "Solana wallet private key",
+        "description": "Base58 Solana private key (Phantom/Solflare export). Optional: leave empty for read-only market data. Signs locally and is never sent to the Worm API. Use a dedicated trading wallet."
+      }
+    },
+    "required": []
+  }
+}
